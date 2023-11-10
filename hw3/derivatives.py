@@ -87,11 +87,9 @@ class LossAndDerivatives:
         """
 
         # YOUR CODE HERE
-        if Y.ndim == 1:
-            Y = Y.reshape(-1, 1)
         error = 2 * (X.dot(w) - Y)
         X_T = np.transpose(X)
-        return X_T.dot(error) / X.shape[0] / Y.shape[1]
+        return X_T.dot(error) / Y.shape[0]
 
     @staticmethod
     def mae_derivative(X, Y, w):
@@ -110,11 +108,9 @@ class LossAndDerivatives:
         """
 
         # YOUR CODE HERE
-        if Y.ndim == 1:
-            Y = Y.reshape(-1, 1)
         error = np.sign(X.dot(w) - Y)
         X_T = np.transpose(X)
-        return X_T.dot(error) / X.shape[0] / Y.shape[1]
+        return X_T.dot(error) / Y.shape[0]
 
     @staticmethod
     def l2_reg_derivative(w):
@@ -127,8 +123,6 @@ class LossAndDerivatives:
         """
 
         # YOUR CODE HERE
-        if w.ndim == 1:
-            w = w.reshape(-1, 1)
         return 2 * w
 
     @staticmethod
@@ -143,8 +137,6 @@ class LossAndDerivatives:
         """
 
         # YOUR CODE HERE
-        if w.ndim == 1:
-            w = w.reshape(-1, 1)
         return np.sign(w)
 
     @staticmethod
