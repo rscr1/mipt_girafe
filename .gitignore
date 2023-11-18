@@ -3,3 +3,5 @@
 venv/
 env/
 __pycache__/
+MNIST/
+submission_dict_hw07.npy
