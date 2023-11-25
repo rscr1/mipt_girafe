@@ -5,3 +5,5 @@ env/
 __pycache__/
 MNIST/
 submission_dict_hw07.npy
+submission_dict_hw08.npy
+car_data.csv
